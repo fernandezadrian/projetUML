@@ -68,16 +68,15 @@ public class ProduitDAORelationnel implements I_ProduitDAO {
 		return true;
 	}
 	
-	public boolean deleteAll(){
-		try {
-			ps = cn.prepareStatement("delete from Produits");
-			return ps.execute();
-		} catch (SQLException e) {
-			e.printStackTrace();
-			return false;
-		}
-		
-	}
+//	public boolean deleteAll(){
+//		try {
+//			ps = cn.prepareStatement("delete from Produits");
+//			return ps.execute();
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//			return false;
+//		}
+//	}
 	
 	public static ProduitDAORelationnel getInstance(){
 		return instance;

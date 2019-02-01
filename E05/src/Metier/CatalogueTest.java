@@ -20,12 +20,10 @@ public class CatalogueTest {
 	public void setUp() {
 		cat = Catalogue.getInstance();
 		cat.clear();
-		//I_ProduitDAO.getInstance().deleteAll();
 	}
 	
 	@AfterClass
 	public static void setDown(){
-		//I_ProduitDAO.getInstance().deleteAll();
 	}
 	
 	@Test
