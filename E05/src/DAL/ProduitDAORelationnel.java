@@ -36,7 +36,7 @@ public class ProduitDAORelationnel implements I_ProduitDAO {
 			ps.execute();
 			return true;
 		} catch (SQLException e) {
-			e.printStackTrace();
+				System.out.println("Erreur création produit");
 			return false;
 		}
 	}
@@ -98,7 +98,7 @@ public class ProduitDAORelationnel implements I_ProduitDAO {
 			ps = cn.prepareStatement("select * from Produits");
 			rs = ps.executeQuery();
 			while(rs.next()){
-				list.add(ProduitFactory.createProduit(rs.getString(1), rs.getDouble(2), rs.getInt(3)));
+				list.add(ProduitFactory.createProduit(rs.getString(2), rs.getDouble(3), rs.getInt(4)));
 			}
 			return list;
 		} catch (SQLException e) {
